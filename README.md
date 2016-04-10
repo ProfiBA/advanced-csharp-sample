@@ -1,6 +1,8 @@
 # Advanced C# Sample
 Example how to use Dependency Injection, Serialization, Interfaces, Auto update etc.
 
+Client is Console App, Web service is ASP.NET MVC 5
+
 Sample app requirements: 
 - Auto updates its list of plugins from a web server and then executes all identified plugins
 - Plugins all implement a simple interface ISimplePlugin with one method: void Print()
