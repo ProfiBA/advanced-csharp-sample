@@ -1,0 +1,39 @@
+﻿@model List<WebService.Models.Plugin>
+
+<h3>@ViewBag.Message</h3>
+
+<p>More debug information.</p>
+
+@if (ViewBag.NoData != null)
+{
+    <h3>@ViewBag.NoData</h3>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-striped ">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>MD5</th>
+                <th>Modified date (UTC)</th>
+            </tr>
+                @{int i = 1;}
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.Name</td>
+                        <td>@item.Hash</td>
+                        <td>@item.DateCreated</td>
+                    </tr>
+                   i++;
+                }
+        </table>
+    </div>
+}
+
+
+
+
+
